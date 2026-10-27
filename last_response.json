@@ -1,0 +1,85 @@
+{
+  "geocoding": {
+    "results": [
+      {
+        "id": 1275339,
+        "name": "Mumbai",
+        "latitude": 19.07283,
+        "longitude": 72.88261,
+        "elevation": 8.0,
+        "feature_code": "PPLA",
+        "country_code": "IN",
+        "admin1_id": 1264418,
+        "timezone": "Asia/Kolkata",
+        "population": 12691836,
+        "country_id": 1269750,
+        "country": "India",
+        "admin1": "Maharashtra"
+      }
+    ],
+    "generationtime_ms": 0.09727478
+  },
+  "forecast": {
+    "latitude": 19.086115,
+    "longitude": 72.85291,
+    "generationtime_ms": 0.23734569549560547,
+    "utc_offset_seconds": 19800,
+    "timezone": "Asia/Kolkata",
+    "timezone_abbreviation": "GMT+5:30",
+    "elevation": 8.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "°C",
+      "precipitation": "mm",
+      "weather_code": "wmo code",
+      "wind_speed_10m": "km/h"
+    },
+    "current": {
+      "time": "2026-10-27T12:00",
+      "interval": 900,
+      "temperature_2m": 35.6,
+      "relative_humidity_2m": 23,
+      "apparent_temperature": 36.8,
+      "precipitation": 0.0,
+      "weather_code": 0,
+      "wind_speed_10m": 5.4
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "°C",
+      "temperature_2m_min": "°C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29"
+      ],
+      "weather_code": [
+        1,
+        1,
+        51
+      ],
+      "temperature_2m_max": [
+        36.6,
+        34.9,
+        33.9
+      ],
+      "temperature_2m_min": [
+        25.4,
+        24.6,
+        26.5
+      ],
+      "precipitation_sum": [
+        0.0,
+        0.0,
+        0.1
+      ]
+    }
+  }
+}

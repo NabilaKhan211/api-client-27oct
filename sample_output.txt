@@ -1,0 +1,57 @@
+# Output from a test run against a local test server that answers in the Open-Meteo response format.
+# The weather values are illustrative. Run the program yourself to see live data.
+
+=== SUCCESSFUL LOOKUP ===
+> python api_client.py Mumbai
+
+==============================================================
+ Weather in Mumbai, Maharashtra, India
+==============================================================
+ Observed at   : 27 Oct 2026, 14:15 (Asia/Kolkata)
+ Condition     : Partly cloudy
+ Temperature   : 32.1 °C (feels like 36.4 °C)
+ Humidity      : 58 %
+ Wind          : 13.6 km/h
+ Precipitation : 0.0 mm
+
+ 3-day forecast
+ Date       Day  Condition                   Low   High     Rain
+ 2026-10-27 Tue  Partly cloudy              25.1   33.4   0.0 mm
+ 2026-10-28 Wed  Overcast                   24.8   32.9   0.2 mm
+ 2026-10-29 Thu  Slight rain                24.5   31.2   6.4 mm
+==============================================================
+
+
+
+=== ERROR HANDLING ===
+Every failure ends with one clear message and exit code 1. No traceback is ever shown.
+
+--- City not found
+Error: No city named 'Nowhereville' was found. Check the spelling or try a larger nearby city.
+
+--- Invalid input (no letters)
+Error: A city name must contain letters.
+
+--- Server problem: HTTP 500 (tried 3 times, waiting 1s then 2s)
+Error: The API server had a problem (HTTP 500). Please try again later.
+
+--- Rate limit: HTTP 429 (server never recovers)
+Error: Too many requests: the API rate limit was reached (HTTP 429).
+
+--- Access denied: HTTP 403
+Error: Access to the API was denied (HTTP 403). An API key or different permissions may be required.
+
+--- Request rejected by the API: HTTP 400 with the API's own reason
+Error: The API rejected the request as invalid (HTTP 400): Latitude must be in range of -90 to 90°. Given: 95.0.
+
+--- Reply is not valid JSON (an HTML page instead)
+Error: The server replied, but the response was not valid JSON.
+
+--- Reply is JSON but the weather section is missing
+Error: The weather data was missing its 'current' section.
+
+--- Request timed out (tried 3 times)
+Error: The request timed out. The server is slow or unreachable.
+
+--- No connection to the server (tried 3 times)
+Error: Could not connect to the server. Check your internet connection.
